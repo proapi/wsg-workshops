@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Treść:</strong>
+  <%= @message.body %>
+</p>
+
+<p>
+  <strong>Autor:</strong>
+  <%= @message.user.name %>
+</p>
+
+<p>
+  <strong>Data:</strong>
+  <%= l(@message.date, format: :short) %>
+</p>
+
+
+<%= link_to 'Edit', edit_message_path(@message) %> |
+<%= link_to 'Back', messages_path %>
